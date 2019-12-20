@@ -24,7 +24,7 @@ font-weight: bolder;
 }
 
 .footer {
-
+    text-align: center;
     padding: 10px;
     padding-top: 60px;
     background-color: orange;
