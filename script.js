@@ -3,7 +3,8 @@ $("#searchBtn").on("click", function () {
     // console.log("search button clicked");
     event.preventDefault();
     var searchTerm = $("#searchInput").val();
-    var limit = 5
+    var limit = $(".custom-select").val();
+    console.log(limit);
     
 
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
@@ -14,19 +15,23 @@ $("#searchBtn").on("click", function () {
         method: "GET"
     })
         .then(function (response) {
-            console.log(response);
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < limit; i++) {
                 var articlesContainer = $("<div>");
                 var articleDiv = $("<div>");
 
                 var headline = JSON.stringify(response.response.docs[i].abstract);
                 var leadP = JSON.stringify(response.response.docs[i].lead_paragraph);
+                var link = JSON.stringify(response.response.docs[i].web_url);
+               
 
-                var content = $("<h1>").text(headline);
-                var leadContent = $("<h2>").text(leadP);
+                var content = $("<h2>").text(headline);
+                var leadContent = $("<h4>").text(leadP);
+                var contentLink = $("<a>").text(link);
+                contentLink.attr("href", response.response.docs[i].web_url);
 
                 content.appendTo(articleDiv);
                 leadContent.appendTo(articleDiv);
+                contentLink.appendTo(articleDiv);
 
                 articleDiv.appendTo(articlesContainer);
 
