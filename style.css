@@ -16,6 +16,10 @@ font-weight: bolder;
     padding: 10px;
 }
 
+#searchBtn, #clearBtn {
+    background-color: slategray;
+    border-color: grey;
+}
 
 #results {
     background-color: teal;
