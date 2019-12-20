@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <title>NYT SEARCH</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <i class="fa fa-newspaper-o" style="font-size:36px"></i>
+            <h1>New York Times Search</h1>
+        </div>
+        <div class="searchbox">
+            <header><h7>Search Parameters</h7></header>
+            <form>
+                <div class="form-group">
+                    <label for="searchterm">Search Term</label>
+                    <input type="search" class="form-control" id="searchInput" aria-describedby="searchTerm">
+                </div>
+                <div class="retrecords">
+                    <label for="retrecordscrit">Number of Records to Retrieve:</label>
+                    <select class="custom-select">
+                        <option selected>Select number of records</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="begin-date">Start Year</label>
+                    <input type="datetime-local" class="form-control" id="datetime-local">
+                </div>
+                <div class="form-group">
+                    <label for="end-date">End Year</label>
+                    <input type="datetime-local" class="form-control" id="datetime-local">
+                </div>
+                <button type="search" class="btn btn-primary" id="searchBtn"><i class="fa fa-search"></i>
+                    <h8> Search</h8></i>
+                </button>
+                <button type="clear" class="btn btn-primary" id="clearBtn"><i class="fa fa-trash">
+                        <h8> Clear Results</h8>
+                    </i></button>
+            </form>
+        </div>
+        <div id="results">
+            <header><h7>Top Articles</h7></header>
+        </div>
+        <div class="footer">
+            Made with lots of love - RAJA
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
