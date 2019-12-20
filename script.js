@@ -1,14 +1,8 @@
 // This will be 'Search' button  - Need Ids for the html elements - take ID's value for search in URL
 $("#searchBtn").on("click", function () {
     // console.log("search button clicked");
-<<<<<<< HEAD
     event.preventDefault();
     var searchTerm = $("#searchInput").val();
-=======
-    var searchTerm = $("#searchInput").val();
-    event.preventDefault();
-    console.log(searchTerm);
->>>>>>> 2e45895a358a7fe25588a445de8a81efd7c941d1
     var limit = 5
     
 
