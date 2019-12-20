@@ -1,10 +1,8 @@
-
 // This will be 'Search' button  - Need Ids for the html elements - take ID's value for search in URL
 $("#searchBtn").on("click", function () {
+    // console.log("search button clicked");
     event.preventDefault();
-    console.log("search button clicked");
     var searchTerm = $("#searchInput").val();
-    console.log(searchTerm);
     var limit = 5
     
 
@@ -18,6 +16,7 @@ $("#searchBtn").on("click", function () {
         .then(function (response) {
             console.log(response);
             for (var i = 0; i < 5; i++) {
+                var articlesContainer = $("<div>");
                 var articleDiv = $("<div>");
 
                 var headline = JSON.stringify(response.response.docs[i].abstract);
@@ -26,9 +25,12 @@ $("#searchBtn").on("click", function () {
                 var content = $("<h1>").text(headline);
                 var leadContent = $("<h2>").text(leadP);
 
-                articleDiv.text(content + leadContent);
+                content.appendTo(articleDiv);
+                leadContent.appendTo(articleDiv);
 
-                $("#results").prepend(articleDiv);
+                articleDiv.appendTo(articlesContainer);
+
+                $("#results").prepend(articlesContainer);
             }
         });
 });
