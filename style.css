@@ -3,11 +3,15 @@
 }
 
 h7 {
-font-weight: bolder;
+    font-weight: bolder;
+    color: white;
+    background-color: slategray;
+
 }
 
 .jumbotron {
     background-color: slategray;
+
 }
 
 .searchbox {
@@ -16,6 +20,10 @@ font-weight: bolder;
     padding: 10px;
 }
 
+#searchBtn, #clearBtn {
+    background-color: slategray;
+    border-color: grey;
+}
 
 #results {
     background-color: teal;
@@ -24,7 +32,7 @@ font-weight: bolder;
 }
 
 .footer {
-
+    text-align: center;
     padding: 10px;
     padding-top: 60px;
     background-color: orange;
