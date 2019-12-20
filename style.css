@@ -3,11 +3,15 @@
 }
 
 h7 {
-font-weight: bolder;
+    font-weight: bolder;
+    color: white;
+    background-color: slategray;
+
 }
 
 .jumbotron {
     background-color: slategray;
+
 }
 
 .searchbox {
